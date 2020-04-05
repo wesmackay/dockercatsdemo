@@ -1,0 +1,6 @@
+sudo apt install docker.io
+sudo docker swarm init ##--advertise-addr ...
+sudo docker build -t dockercatsdemo .
+sudo docker stack deploy --compose-file docker-compose.yml docker-cats
+sudo docker service ls
+sudo docker service scale docker-cats_webapp=1
